@@ -12,7 +12,7 @@ cp -f $root/own/raw/sendNotify.js $root/scripts
 cp -f $root/own/raw/USER_AGENTS.js $root/scripts
 cp -f $root/own/raw/magic.js $root/scripts
 
-diybot_url="https://github.com/jacklei2008/JD_Diy-1.git"
+diybot_url="https://github.com/dragon-tang/JD_Diy.git"
 jbot_botset=$root/config/bot.json
 diybot_repo=$root/repo/diybot
 diybot_diy=$root/jbot/diy
