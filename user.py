@@ -42,8 +42,8 @@ async def user(event):
 async def activityID(event):
     try:
         text = event.message.text
-        if "zjdbody" in text:
-            name = "赚京豆"
+        if "computer_activityId" in text:
+            name = "电脑配件"
         elif "comm_activityIDList" in text:
             name = "jdjoy_open通用ID任务"
         elif "jd_mhurlList" in text:
@@ -113,8 +113,8 @@ async def activityID(event):
             await jdbot.edit_message(msg, f"【取消】 `{name}` 环境变量无需改动！")
             return
         try:
-            if "zjdbody" in event.message.text:
-                await cmd('task raw_jk_script_zxd.js now')
+            if "computer_activityId" in event.message.text:
+                await cmd('task Tivon521_yan_KR/jd_computer.js now')
             elif "comm_activityIDList" in event.message.text:
                 await cmd('task Tivon521_yan_KR/jd_joyjd_open.js now')
             elif "jd_mhurlList" in event.message.text:
@@ -144,11 +144,11 @@ async def activityID(event):
             elif "M_WX_ADD_CART_URL" in event.message.text:
                 await cmd('task Tivon521_yan_KR/m_jd_wx_addCart.js now')
             elif "jd_redrain_url" in event.message.text:
-                msg = await jdbot.send_message(chat_id, r'`更换整点雨url完毕\n请定时任务0 0 * * * jtask jd_redrain now')
+                msg = await jdbot.send_message(chat_id, r'`更换整点雨url完毕\n请定时任务0 0 * * * task Tivon521_yan_KR/jd_redrain.js now')
                 await asyncio.sleep(1)
                 await jdbot.delete_messages(chat_id, msg)
             elif "jd_redrain_half_url" in event.message.text:
-                msg = await jdbot.send_message(chat_id, r'`更换半点雨url完毕\n请定时任务30 21,22 * * * jtask jd_redrain_half now')
+                msg = await jdbot.send_message(chat_id, r'`更换半点雨url完毕\n请定时任务30 21,22 * * * task Tivon521_yan_KR/jd_redrain_half.js now')
                 await asyncio.sleep(1)
                 await jdbot.delete_messages(chat_id, msg)
             else:
