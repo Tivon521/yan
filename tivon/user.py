@@ -261,13 +261,13 @@ async def activityID(event):
                     break
                 elif "jd_redrain_url" in text:
                     lable = True
-                    msg = await jdbot.send_message(chat_id, r'`更换整点雨url完毕\n请定时任务0 0 * * * task jd_redrain now')
+                    msg = await jdbot.send_message(chat_id, r'`更换整点雨url完毕\n请定时任务0 0 * * * task Tivon521_yan_619/jd_redrain now')
                     await asyncio.sleep(1)
                     await jdbot.delete_messages(chat_id, msg)
                     break
                 elif "jd_redrain_half_url" in text:
                     lable = True
-                    msg = await jdbot.send_message(chat_id, r'`更换半点雨url完毕\n请定时任务30 21,22 * * * task jd_redrain_half now')
+                    msg = await jdbot.send_message(chat_id, r'`更换半点雨url完毕\n请定时任务30 21,22 * * * task Tivon521_yan_619/jd_redrain_half now')
                     await asyncio.sleep(1)
                     await jdbot.delete_messages(chat_id, msg)
                     break
